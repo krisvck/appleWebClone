@@ -61,7 +61,8 @@ header {
 .nav-link-apple {
     width: 1.6rem;
     height: 4.4rem;
-    background: url("images/icons/apple.svg") center no-repeat;
+    background: url("images/icons/k1.svg") center no-repeat;
+    margin-top: 0.3rem;
 }
 
 .nav-link-search {
@@ -433,4 +434,126 @@ footer {
     height: 10rem;
     background-color: rgba(0,0,0,.8);
     backdrop-filter: blur(2rem);
+}
+
+/* search bar */
+.menu-item {
+    transform: scale(1);
+    transition: 0.5s;
+    display: block;
+}
+
+.menu-item.hide-item {
+    transform: scale(0);
+}
+
+/* transitions when clicking on 1st search */
+.nav-item:nth-child(2) .menu-item.hide-item {
+    transition-delay: 0.6s;
+}
+.nav-item:nth-child(3) .menu-item.hide-item {
+    transition-delay: 0.5s;
+}
+.nav-item:nth-child(4) .menu-item.hide-item {
+    transition-delay: 0.4s;
+}
+.nav-item:nth-child(5) .menu-item.hide-item {
+    transition-delay: 0.3s;
+}
+.nav-item:nth-child(6) .menu-item.hide-item {
+    transition-delay: 0.2s;
+}
+.nav-item:nth-child(7) .menu-item.hide-item {
+    transition-delay: 0.1s;
+}
+.nav-item:nth-child(8) .menu-item.hide-item {
+    transition-delay: 0s;
+}
+
+/* transition back to original */ 
+.nav-item:nth-child(2) .menu-item {
+    transition-delay: 0;
+}
+.nav-item:nth-child(3) .menu-item {
+    transition-delay: 0.1s;
+}
+.nav-item:nth-child(4) .menu-item {
+    transition-delay: 0.2s;
+}
+.nav-item:nth-child(5) .menu-item {
+    transition-delay: 0.3s;
+}
+.nav-item:nth-child(6) .menu-item {
+    transition-delay: 0.4s;
+}
+.nav-item:nth-child(7) .menu-item {
+    transition-delay: 0.5s;
+}
+.nav-item:nth-child(8) .menu-item {
+    transition-delay: 0.6s;
+}
+
+.search-form {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(0);
+    width: 600px;
+    height: 44px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+}
+
+.search-form.active {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+    transform: translateX(-50%);
+}
+
+.search-form input {
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-form input::placeholder {
+    color: #fff;
+}
+
+.search-form:before {
+    content: url("images/icons/search.svg");
+    position: absolute;
+    top: 0px;
+    left: -26px;
+    font-size: 18px;
+    color: #fff;
+    font-family: fontAwesome;
+}
+
+.close {
+    position: absolute;
+    right: 220px;
+    top: 1px;
+    height: 44px;
+    
+    color: #fff;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: center;
+    width: 20px;
+    cursor: pointer; 
+    opacity: 0;
+    visibility: hidden;
+}
+
+.close.active {
+    opacity: 1;
+    visibility: visible;
+    
 }
