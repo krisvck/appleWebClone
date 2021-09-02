@@ -387,3 +387,45 @@ consistent styles */
     }
 
 }
+
+.sub-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.square {
+    width: 100%;
+    margin: 1%;
+    height: 350px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 970px) {
+    .square {
+        width: 48%;
+        margin: 1%;
+        height: 600px;
+    }
+}
+
+.phone1 {
+    background: url("images/hero/iphone-11-pro/iphone_11_pro_medium.jpg");
+}
+.phone2 {
+    background: url("images/hero/iphone-11-pro/iphone_11_pro_medium.jpg");
+}
+.phone3 {
+    background: url("images/hero/iphone-11-pro/iphone_11_pro_medium.jpg");
+}
+.phone4 {
+    background: url("images/hero/iphone-11-pro/iphone_11_pro_medium.jpg");
+}
+
+body {
+    background-color: white;
+}
