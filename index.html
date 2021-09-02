@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple</title>
+    <title>Kris</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/icons/k1.svg"/>
+
     <link rel = "stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -34,38 +37,44 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Mac</a>
+                        <a href="#" class="nav-link menu-item">Mac</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">iPad</a>
+                        <a href="#" class="nav-link menu-item">iPad</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">iPhone</a>
+                        <a href="#" class="nav-link menu-item">iPhone</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Watch</a>
+                        <a href="#" class="nav-link menu-item">Watch</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">TV</a>
+                        <a href="#" class="nav-link menu-item">TV</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Music</a>
+                        <a href="#" class="nav-link menu-item">Music</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Support</a>
+                        <a href="#" class="nav-link menu-item">Support</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link nav-link-search"></a>
+                        <a href="#" id="search" class="nav-link nav-link-search"></a>
                     </li>
 
                     <li class="nav-item nav-item-hidden">
-                        <a href="#" class="nav-link nav-link-bag"></a>
+                        <a href="#" class="nav-link nav-link-bag menu-item"></a>
                     </li>
                 </ul>
-
-
+                <div class="search-form">
+                    <form>
+                        <input type="text" name="" placeholder="Search K.com">
+                    </form>
+                    
+                </div>
+                
+                <a class="close"><i class="fa fa-times"></i></a>
             </nav>
-
+            
         </div>
     </header>
 
@@ -176,5 +185,24 @@
 
 
     <script src="main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#search').click(function(){
+                $('.menu-item').addClass('hide-item')
+                $('.search-form').addClass('active')
+                $('.close').addClass('active')
+                $('#search').hide()
+            })
+            $('.close').click(function(){
+                $('.menu-item').removeClass('hide-item')
+                $('.search-form').removeClass('active')
+                $('.close').removeClass('active')
+                $('#search').show()
+            })
+        }) 
+        </script>
 </body>
 </html>
